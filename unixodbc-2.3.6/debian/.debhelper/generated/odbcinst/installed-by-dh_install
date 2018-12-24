@@ -1,0 +1,2 @@
+debian/tmp/usr/bin/odbcinst
+debian/tmp/etc/odbc.ini

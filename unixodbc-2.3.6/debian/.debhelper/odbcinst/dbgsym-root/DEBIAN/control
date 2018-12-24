@@ -1,0 +1,12 @@
+Package: odbcinst-dbgsym
+Source: unixodbc
+Version: 2.3.6-0.1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Steve Langasek <vorlon@debian.org>
+Installed-Size: 26
+Depends: odbcinst (= 2.3.6-0.1)
+Section: debug
+Priority: optional
+Description: debug symbols for odbcinst
+Build-Ids: 118b0b12bfc0179521d281b21ad5e214f9f431d2

@@ -1,0 +1,95 @@
+Format: 1.8
+Date: Wed, 09 May 2018 21:53:53 +1000
+Source: unixodbc
+Binary: unixodbc libodbc1 unixodbc-dev odbcinst1debian2 odbcinst
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64
+Version: 2.3.6-0.1
+Distribution: unstable
+Urgency: medium
+Maintainer: Steve Langasek <vorlon@debian.org>
+Changed-By: Hugh McMaster <hugh.mcmaster@outlook.com>
+Description:
+ libodbc1   - ODBC library for Unix
+ odbcinst   - Helper program for accessing odbc ini files
+ odbcinst1debian2 - Support library for accessing odbc ini files
+ unixodbc   - Basic ODBC tools
+ unixodbc-dev - ODBC libraries for UNIX (development files)
+Closes: 422207 675058 888968 891596 893891
+Changes:
+ unixodbc (2.3.6-0.1) unstable; urgency=medium
+ .
+   * Non-maintainer upload.
+   * New upstream release (Closes: #888968).
+     - Fix buffer overflow when calling unicode_to_ansi_copy() in
+       DriverManager/SQLDriverConnectW.c (CVE-2018-7409) (Closes: #891596).
+     - Package upstream manpages instead of Debian versions (Closes: #893891).
+     - Fix potential buffer overflow vulnerabilities in SQLDriverConnect
+       functions (CVE-2012-2657 and CVE-2012-2658) (Closes: #675058).
+     - Install pkg-config files (Closes: #422207).
+   * Switch to dpkg-source 3.0 (quilt) format.
+   * Update debhelper package compatibility to level 11.
+   * debian/changelog: Remove trailing whitespace.
+   * debian/control:
+     - Build-Depend on debhelper version 11.
+     - Remove dh-autoreconf from the Build-Depends list.
+     - Raise Standards-Version to 4.1.4 from 3.9.8 (no changes needed).
+     - Remove the Vcs-fields until the package repository moves to Salsa.
+     - Remove the deprecated Priority: extra field from unixodbc-dev.
+     - Use the inherited Section field for libodbc1 and odbcinst1debian2.
+     - Update package descriptions for odbcinst1debian2 and odbcinst.
+     - Drop un-needed Conflicts field from unixodbc.
+   * debian/copyright:
+     - Use secure HTTP in the Format field.
+     - Update Copyright information for unixODBC 2.3.6.
+   * debian/docs:
+      - Rename to unixodbc.docs.
+   * debian/patches:
+     - Convert unixodbc_2.3.4-1.1.diff into patches.
+     - Add a patch to prevent __post_inernal_error() from being exported.
+     - Add a patch to fix spelling errors in DRVConfig/txt/drvcfg.c.
+     - Add a patch to fix spelling and formatting in odbcinst.ini.5.
+     - Forward some patches upstream.
+   * debian/rules:
+     - Add 'hardening=+all' to DEB_BUILD_MAINT_OPTIONS.
+     - Remove '--with autoreconf' (now handled by debhelper >= level 10).
+     - Remove dh_auto_clean override.
+     - Compile with the default CXXFLAGS options.
+   * Add debian/watch file.
+   * Remove a lintian override (symbols-file-contains-debian-revision).
+   * Remove debian/clean (no longer needed).
+   * Remove debian/odbcinst.postinst (no longer needed).
+   * Remove debian/dirs: /usr/lib/odbc has been replaced by multi-arch paths.
+Checksums-Sha1:
+ 6d8eccb9bcdf158acc45cc8413f914c55fbdbe4c 694580 libodbc1-dbgsym_2.3.6-0.1_amd64.deb
+ a41f1109b90b65acdafa00b3437fe9650b7d95d3 374368 libodbc1_2.3.6-0.1_amd64.deb
+ 5d2078b4246cf64dc08d0f0ce46765a6d9d5bb94 8852 odbcinst-dbgsym_2.3.6-0.1_amd64.deb
+ 4fe9168973413e9d32c855e4841595c705f4dc8f 183068 odbcinst1debian2-dbgsym_2.3.6-0.1_amd64.deb
+ 53668a103032aa51a78979d6b1e9194dec6405e8 161440 odbcinst1debian2_2.3.6-0.1_amd64.deb
+ 71c788863b1877b399b5f182ff9175cd8a854264 56980 odbcinst_2.3.6-0.1_amd64.deb
+ ebbe697befabbe62d283c720979cf51910ccf51e 35460 unixodbc-dbgsym_2.3.6-0.1_amd64.deb
+ 8a37aa9342e2727d25c7a7d8b8a2f8db33f8b34c 3401064 unixodbc-dev_2.3.6-0.1_amd64.deb
+ 2cb5115ca20277670a2ba2a93affc3590b61a6d8 7709 unixodbc_2.3.6-0.1_amd64.buildinfo
+ 617767c90986383ad055ad114aec797a52e210a7 95944 unixodbc_2.3.6-0.1_amd64.deb
+Checksums-Sha256:
+ 5bb42e01484978b110d9dcbc5bd4b54aac3d96b8ec83bd78aa12aa942a2cdc60 694580 libodbc1-dbgsym_2.3.6-0.1_amd64.deb
+ 6b806f19d20c5df68319dfc7ee13fae8109c7f68d4760353a2eb612f4d1ba9ee 374368 libodbc1_2.3.6-0.1_amd64.deb
+ 7ccbbfc3c636561697d7d5923a507900ee39dc40c6ab2472e97e5e2ad231a21f 8852 odbcinst-dbgsym_2.3.6-0.1_amd64.deb
+ 9d95253c1822a838f8db78cb74ef036128cd3b691fb1d5499b5861d58adfb4a4 183068 odbcinst1debian2-dbgsym_2.3.6-0.1_amd64.deb
+ d7d62ecbd463404b10f5362ee176a462476c839990a18b78988d3dd45a1a3496 161440 odbcinst1debian2_2.3.6-0.1_amd64.deb
+ 54ff1d6e9ddf1414537eb288523c82a82ffcdd128fab787704bcb8e0f3f9286c 56980 odbcinst_2.3.6-0.1_amd64.deb
+ 7451a87ce0374e19fe914e984ab1170c0755896ab57a6e6c79741943c7e457be 35460 unixodbc-dbgsym_2.3.6-0.1_amd64.deb
+ d137b16b7cf3ead8cfcc94b27508b36d38f31674a98f466bbce0fcb43fc0bc3d 3401064 unixodbc-dev_2.3.6-0.1_amd64.deb
+ c63f6d8f5a7808a61e3e68ad7a1dcb98d450a38731d6915552f8e67ce64efe5a 7709 unixodbc_2.3.6-0.1_amd64.buildinfo
+ 7f593be558760b241ae3c82e8a29c08d9d58cdd110d94bf622bf5534b0c83a39 95944 unixodbc_2.3.6-0.1_amd64.deb
+Files:
+ 4cdd24ee1614471c2b09f105430987b7 694580 debug optional libodbc1-dbgsym_2.3.6-0.1_amd64.deb
+ 4ebfd37adff280ab560c632f3baa45b1 374368 libs optional libodbc1_2.3.6-0.1_amd64.deb
+ 9282a2cb16283a5c2b96b62a805f3961 8852 debug optional odbcinst-dbgsym_2.3.6-0.1_amd64.deb
+ 58e895f0d93e125ff9c53f8205816bda 183068 debug optional odbcinst1debian2-dbgsym_2.3.6-0.1_amd64.deb
+ eba767dca4d0adcd150e92d580f31ec4 161440 libs optional odbcinst1debian2_2.3.6-0.1_amd64.deb
+ 0e4423dec6e91d5ad4ebc48103084b8b 56980 utils optional odbcinst_2.3.6-0.1_amd64.deb
+ ded822a5e486bc624c78c9e0932b7f10 35460 debug optional unixodbc-dbgsym_2.3.6-0.1_amd64.deb
+ 60b2a496a83e305a171fffe3f9327ca8 3401064 libdevel optional unixodbc-dev_2.3.6-0.1_amd64.deb
+ 2d73ab247b8f93a5ef8e87765902fd82 7709 libs optional unixodbc_2.3.6-0.1_amd64.buildinfo
+ 0c2f05724c8e67f94cb511c61cfd33da 95944 database optional unixodbc_2.3.6-0.1_amd64.deb

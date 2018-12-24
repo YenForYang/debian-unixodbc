@@ -1,0 +1,5 @@
+debian/tmp/usr/lib/x86_64-linux-gnu/libodbc.so.2
+debian/tmp/usr/lib/x86_64-linux-gnu/libodbc.so.2.0.0
+debian/tmp/usr/lib/x86_64-linux-gnu/libodbccr.so.2
+debian/tmp/usr/lib/x86_64-linux-gnu/libodbccr.so.2.0.0
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libnn.so

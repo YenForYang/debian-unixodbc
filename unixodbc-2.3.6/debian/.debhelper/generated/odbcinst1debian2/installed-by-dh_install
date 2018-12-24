@@ -1,0 +1,15 @@
+debian/tmp/usr/lib/x86_64-linux-gnu/libodbcinst.so.2
+debian/tmp/usr/lib/x86_64-linux-gnu/libodbcinst.so.2.0.0
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libesoobS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libmimerS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libodbcdrvcfg1S.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libodbcdrvcfg2S.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libodbcminiS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libodbcmyS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libodbcnnS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libodbcpsqlS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libodbctxtS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/liboplodbcS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/liboraodbcS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libsapdbS.so
+debian/tmp/usr/lib/x86_64-linux-gnu/odbc/libtdsS.so

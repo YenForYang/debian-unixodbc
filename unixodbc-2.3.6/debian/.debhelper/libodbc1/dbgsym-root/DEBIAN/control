@@ -1,0 +1,13 @@
+Package: libodbc1-dbgsym
+Source: unixodbc
+Version: 2.3.6-0.1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Steve Langasek <vorlon@debian.org>
+Installed-Size: 776
+Depends: libodbc1 (= 2.3.6-0.1)
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libodbc1
+Build-Ids: 49dc1232e04484bbd2c8e91be9ae7b0b5c23b0de c64516528b5beee0ef4ebcf2114b90fe4d50dbeb d6f550399ee23510df8ed49919bcd3ad19b6ecb1

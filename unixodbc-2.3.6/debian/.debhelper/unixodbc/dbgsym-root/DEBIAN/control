@@ -1,0 +1,12 @@
+Package: unixodbc-dbgsym
+Source: unixodbc
+Version: 2.3.6-0.1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Steve Langasek <vorlon@debian.org>
+Installed-Size: 67
+Depends: unixodbc (= 2.3.6-0.1)
+Section: debug
+Priority: optional
+Description: debug symbols for unixodbc
+Build-Ids: a2fa8fe04ffc71704bb0c11fda9bf13c6d2de5b2 dc56b35cc7a97439789413819a3f9a766ce3c9c3
